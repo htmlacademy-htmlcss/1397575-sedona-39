@@ -45,6 +45,7 @@ body {
 }
 
 .button {
+  font-family: inherit;
   color: #FFFFFF;
   background-color: #82B3D3;
   font-size: 20px;
@@ -94,7 +95,7 @@ body {
 
 /*Секция приветствие*/
 .hero {
-  background-color: grey;
+  background-color: #808080;
   background-image: url(../image/background/index-hero.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -167,19 +168,17 @@ body {
 }
 
 .newsletter input {
+  font-family: "PT Sans", sans-serif;
   background-color: #F2F2F2;
   border: none;
   line-height: 24px;
   color: #000000;
 }
 
-.newsletter-button {
-  background-color: #82B3D3;
 
-}
 
 .newsletter-index {
-  background-color: grey;
+  background-color: #808080;
   background-image: url(../image/background/index-newsletter.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -211,7 +210,7 @@ body {
 
 
 .container {
-  background-color: grey;
+  background-color: #808080;
   color: #FFFFFF;
   background-image: url(../image/background/catalog-filter.jpg);
   background-repeat: no-repeat;
@@ -276,6 +275,7 @@ body {
 }
 
 .select-control {
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
