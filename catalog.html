@@ -9,7 +9,7 @@
 
   <body class="page">
     <div class="page-container">
-      <header class="page-header center-container" data-test="header">
+      <header class="page-header" data-test="header">
         <a class="logo" href="index.html">
           <img src="image/logotype.svg" width="140" height="70" alt="Логотип сайта Седона">
         </a>
@@ -43,8 +43,8 @@
       </header>
 
       <main class="main-container main-inner" data-test="main">
-        <div class="container">
-          <header class="inner-header center-container">
+        <div class="container-background">
+          <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ol class="breadcrumbs">
               <li class="breadcrumbs-item">
@@ -60,7 +60,7 @@
 
           <section class="filter" data-test="filter">
             <h2 class="visually-hidden">Фильтр для поиска</h2>
-            <form class="catalog-filter center-container" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -126,11 +126,11 @@
           </section>
         </div>
 
-        <section class="sort center-container">
+        <section class="sort">
           <h2 class="visually-hidden">Сортировка</h2>
           <p class="result-filter">Найдено гостиниц: 38</p>
 
-          <select class="select-control" aria-label="Сортировка">
+          <select class="select-control move-to-right" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначало популярные</option>
@@ -139,26 +139,26 @@
           <ul class="button-sort-list">
             <li class="button-sort-item">
               <button class="button-sort button-sort-current" type="button" aria-label="Карточки">
-                <span>Карточки</span>
+                <span class="visually-hidden">Карточки</span>
               </button>
             </li>
             <li class="button-sort-item">
               <button class="button-sort" type="button" aria-label="Крупные значки">
-                <span>Крупные значки</span>
+                <span class="visually-hidden">Крупные значки</span>
               </button>
             </li>
             <li class="button-sort-item">
               <button class="button-sort" type="button" aria-label="Список">
-                <span>Список</span>
+                <span class="visually-hidden">Список</span>
               </button>
             </li>
           </ul>
 
         </section>
 
-        <section class="catalog-hotels center-container" data-test="catalog">
+        <section class="catalog-hotels" data-test="catalog">
 
-          <ul class="hotel-list">
+            <ul class="hotel-list">
             <li class="hotel-card">
               <a class="hotel-card-link" href="#" tabindex="-1">
                 <img src="image/catalog/hotel-1.jpg" width="300" height="212" alt="Звездное небо в ущелье">
@@ -252,6 +252,7 @@
 
             </li>
           </ul>
+
 
           <ol class="pagination">
             <li class="pagination-item">
