@@ -64,7 +64,7 @@ body {
 }
 
 .basic-text {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 26px;
 
   margin: 0;
@@ -92,6 +92,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
+  border-radius: 4px;
 }
 
 /*header*/
@@ -358,12 +359,20 @@ body {
   padding-bottom: 104px;
 }
 
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
 .newsletter input {
   font-family: inherit;
   background-color: #F2F2F2;
   border: none;
+  font-size: 18px;
   line-height: 24px;
   color: #000000;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
 
   width: 452px;
   height: 52px;
@@ -372,6 +381,7 @@ body {
 
 .newsletter-button {
   padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
 }
 
 .newsletter-index {
@@ -396,9 +406,12 @@ body {
 }
 
 .footer-wrapper {
-  display: flex;
   padding: 40px 70px 30px;
-  justify-content: space-between;
+  min-height: 50px;
+
+  display: grid;
+  grid-template-columns: 144px 1fr 115px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -410,13 +423,13 @@ body {
   padding: 0;
   margin: 0;
 
-  width: 162px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .social-item a {
   border: 1px solid red;
+ box-sizing: border-box;
   /*Временно для обозначения границ*/
   display: block;
   width: 48px;
@@ -428,7 +441,7 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  width: 700px;
+
   margin: 0;
 }
 
@@ -441,6 +454,9 @@ body {
   margin: 0;
 }
 
+.about-text img {
+  display: block;
+}
 /*catalog.html*/
 
 
@@ -571,7 +587,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 
-
+  margin: 0;
 }
 
 .select-control {
@@ -583,9 +599,9 @@ body {
 
   width: 292px;
 
-  padding-left: 20px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .button-sort-list {
@@ -637,15 +653,20 @@ body {
 
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
 
   gap: 16px;
 
 }
 
+.hotel-card .button {
+  align-self: flex-start;
+}
+
 .hotel-card img {
   display: block;
   margin: 0;
-  /* object-fit: contain; */
+  object-fit: contain;
 }
 
 .hotel-card-link {
@@ -687,6 +708,7 @@ body {
 }
 .rating {
   width: 300px;
+  min-height: 37px;
   display: flex;
   justify-content: space-between;
 }
@@ -697,6 +719,11 @@ body {
   text-transform: uppercase;
 
   margin: 0;
+
+  background-color: #F2F2F2;
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
+
 }
 
 .star {
@@ -709,11 +736,13 @@ body {
 .pagination {
   list-style: none;
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
 
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
 }
 
 
