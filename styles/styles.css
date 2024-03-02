@@ -531,6 +531,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  padding: 0;
 
   margin-bottom: 32px;
 }
@@ -578,6 +579,7 @@ body {
   padding: 0 70px;
 
   display: flex;
+  gap: 70px;
   align-items: center;
 }
 
@@ -608,7 +610,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 70px;
 
   display: flex;
 }
@@ -623,6 +624,7 @@ body {
   min-height: 48px;
   border: 2px solid #E5E5E5;
 
+  padding: 0;
 }
 
 
