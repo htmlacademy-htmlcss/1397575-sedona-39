@@ -129,9 +129,18 @@ body {
   margin-bottom: -6px;
 }
 
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
 .logo img {
   display: block;
 }
+
 
 .navigation {
   display: flex;
