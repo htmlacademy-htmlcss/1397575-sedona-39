@@ -539,6 +539,15 @@ body {
   padding-left: 20px;
 }
 
+.newsletter input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+.newsletter input:hover {
+  background-color: #E6E6E6;
+}
+
+
 .newsletter-button {
   padding: 8px 50px;
   border-radius: 0 4px 4px 0;
@@ -740,12 +749,12 @@ body {
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
-  /* color: rgba(255, 255, 255, 0.6); */
+
 }
 
 .breadcrumbs-link:active {
   opacity: 0.3;
-  /* color:rgba(255, 255, 255, 0.3); */
+
 }
 
 .breadcrumbs-link-main::before {
@@ -757,23 +766,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-  /* position: relative;
-  display: inline-block;
 
-  background-color: #FFFFFF;
-  mask-image: url(../image/breadcrumbs/mainpage-icon.svg);
-  mask-size: 12px, 12px;
-  mask-repeat: no-repeat;
-  mask-position: center; */
 }
 
-/* .breadcrumbs-link-main:hover::before {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbs-link-main:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-} */
 
 .breadcrumbs-item {
   position: relative;
@@ -795,9 +790,11 @@ body {
 /*Фильтр*/
 .filter {
   line-height: 23px;
+
 }
 
 .catalog-filter {
+  min-height: 160px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px 70px;
@@ -834,11 +831,127 @@ body {
   margin-bottom: 16px;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control-input[type="checkbox"]:focus-visible + .control-mark{
+  outline: 3px solid #83B3D3;
+
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  left: 0;
+  top: 2px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark{
+  background-image: url(../image/input-checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+.control-input[type="radio"]:focus-visible + .control-mark{
+  outline: 3px solid #83B3D3;
+
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.range-wrapper-inputs {
+  display: flex;
+  gap: 2px;
+  padding-bottom: 44px;
+}
+
+.control-price {
+  position: relative;
+}
+
+.control-label-price {
+  position: absolute;
+  left: 106px;
+  top: 12px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .control-input-price {
   font-family: inherit;
   width: 143px;
-
+  padding: 12px 20px;
+  font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+
+}
+
+.control-input-price::-webkit-outer-spin-button,
+.control-input-price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  background-color: #FFFFFF;
+  height: 4px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  top: -8px;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-max {
+  left: 206px;
 }
 
 /*Кнопки фильтра*/
@@ -1214,4 +1327,189 @@ body {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left:0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+
+  padding: 64px 70px;
+}
+
+.modal-search {
+  width: 717px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  background-image: url(../image/modal/close-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  top: 64px;
+  right: 52px;
+}
+
+.modal-tittle {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(2, 247px);
+  column-gap: 83px;
+  row-gap: 23px;
+}
+
+.date-selection {
+  position: relative;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  align-items: center;
+
+}
+
+.field-group {
+  margin: 0;
+  padding: 0;
+}
+
+.form-label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  width: 119px;
+}
+
+.field {
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #F2F2F2;
+  color:#000000;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+
+}
+
+.field::placeholder {
+  color:#000000;
+}
+
+
+
+.field {
+  flex-grow: 1;
+}
+.calendar{
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  right: 20px;
+}
+
+.comment {
+  font-size: 16px;
+  margin-left: 137px;
+  padding-left: 20px;
+
+}
+
+.comment-red {
+  color: #FF5757;
+}
+
+.amount-of-child {
+  justify-self: end;
+}
+
+.amount-selection {
+  position: relative;
+}
+.amount-selection .field {
+  position: relative;
+  flex-grow: 0;
+  width: 110px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 40px;
+}
+
+.button-step {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /* background-color: transparent; */
+  width: 40px;
+  height: 48px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+}
+
+.button-step-down::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 14px;
+  right: 50%;
+
+  background-color: #000000;
+
+}
+.button-step-down {
+  right: 71px;
+
+}
+
+.button-step-up::before,
+.button-step-up::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: #000000;
+    padding: 0;
+    border: none;
+}
+.button-step-up::after {
+    transform: rotate(90deg);
 }
