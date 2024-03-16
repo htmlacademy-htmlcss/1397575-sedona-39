@@ -919,7 +919,7 @@ body {
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
-  padding-bottom: 44px;
+  padding-bottom: 36px;
 }
 
 .control-price {
@@ -957,13 +957,26 @@ body {
   background-color: #E6E6E6;
 }
 
+.control-input-price:not(:disabled):focus {
+  background-color: #E6E6E6;
+}
+
 .control-input-price:disabled {
   opacity: 0.3;
 }
-
 .range-scale {
+  height: 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.range-scale::after {
+  content: "";
+
+  display: block;
   height: 4px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1013,7 +1026,6 @@ body {
 }
 
 .button-reset:hover {
-  /* opacity: 0.6; */
   color: rgba(255, 255, 255, 0.6);
   background-color: inherit;
 }
@@ -1024,7 +1036,6 @@ body {
 }
 
 .button-reset:disabled {
-  /* opacity: 0.1; */
   color: rgba(255, 255, 255, 0.1);
   background-color: transparent;
 }
@@ -1457,7 +1468,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   background-color: #F2F2F2;
-  /* background-color: #6C9E42; */
   color:#000000;
   font-weight: 700;
   border: none;
@@ -1478,7 +1488,7 @@ body {
 }
 
 .field::placeholder {
-  color:#000000;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .date-selection {
@@ -1498,10 +1508,7 @@ body {
 .date-selection .field {
   width: 100%;
   padding-right: 38px;
-  /* background-image: url(../image/modal/calendar-icon.svg);
-  background-repeat: no-repeat;
-  background-position: right 22px center; */
-}
+  }
 .calendar{
   border: none;
   padding: 0;
@@ -1533,10 +1540,16 @@ body {
   opacity: 0.2;
 }
 
+.calendar:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
 .field:disabled + .calendar {
   opacity: 0.3;
   cursor: default;
 }
+
 
 .comment {
   font-size: 16px;
@@ -1673,14 +1686,19 @@ body {
 
 }
 
-.button-step-down:hover::before,
-.button-step-up:hover::before,
-.button-step-up:hover::after  {
+.button-step-down:not(:disabled):hover::before,
+.button-step-up:not(:disabled):hover::before,
+.button-step-up:not(:disabled):hover::after  {
   background-color: #000000;
 }
 
-.button-step:active {
+.button-step:not(:disabled):active {
   opacity: 0.3;
+}
+
+.button-step:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 
