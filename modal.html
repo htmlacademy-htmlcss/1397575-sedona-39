@@ -191,26 +191,15 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" metod="post">
             <div class="field-group date-selection">
               <label class="form-label" for="date-check-in">Дата Заезда:</label>
-
-              <div class="wrapper-field">
-                <input class="field" type="text" id="date-check-in" name="date-check-in" placeholder="Укажите дату" value="27 апреля 2020" required>
-                <button class="calendar" type="button">
-                  <span class="visually-hidden">Открыть календарь</span>
-                </button>
-              </div>
+              <input class="field" type="text" id="date-check-in" name="date-check-in" placeholder="Укажите дату"
+                value="27 апреля 2020" required>
               <p class="comment comment-red">Мы не можем отправить вас в прошлое.</p>
-
             </div>
 
             <div class="field-group date-selection">
               <label class="form-label" for="date-departure">Дата Выезда:</label>
-              <div class="wrapper-field">
-                <input class="field" type="text" id="date-departure" name="date-departure"
-                  placeholder="Укажите дату" value="1 сентября 2023" required>
-                <button class="calendar" type="button">
-                  <span class="visually-hidden">Открыть календарь</span>
-                </button>
-              </div>
+              <input class="field" type="text" id="date-departure" name="date-departure" placeholder="Укажите дату"
+                value="1 сентября 2023" required>
               <p class="comment">На эти даты есть свободные номера. Пока есть.</p>
 
             </div>
@@ -222,7 +211,7 @@
                   <span class="visually-hidden">Меньше</span>
                 </button>
                 <input class="field field-number" type="number" id="amount-of-adults" name="amount-of-adults" value="2"
-                  min="1">
+                  min="1" placeholder="2">
                 <button class="button-step button-step-up" type="button">
                   <span class="visually-hidden">Больше</span>
                 </button>
@@ -246,7 +235,7 @@
                   <span class="visually-hidden">Меньше</span>
                 </button>
                 <input class="field field-number" type="number" id="amount-of-child" name="amount-of-child" value="2"
-                  min="0">
+                  min="0" placeholder="2">
                 <button class="button-step button-step-up" type="button">
                   <span class="visually-hidden">Больше</span>
                 </button>
