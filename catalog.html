@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body class="page">
@@ -75,7 +76,7 @@
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input visually-hidden" type="checkbox" name="parking"  checked>
+                      <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Парковка</span>
                     </label>
@@ -154,37 +155,41 @@
           </section>
         </div>
 
-        <section class="sort">
-          <h2 class="visually-hidden">Сортировка</h2>
-          <p class="result-filter">Найдено гостиниц: 38</p>
-
-          <select class="select-control move-to-right" aria-label="Сортировка">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначало популярные</option>
-          </select>
-
-          <ul class="button-sort-list">
-            <li class="button-sort-item">
-              <button class="button-sort button-sort-current button-sort-card" type="button" aria-label="Карточки">
-                <span class="visually-hidden">Карточки</span>
-              </button>
-            </li>
-            <li class="button-sort-item">
-              <button class="button-sort button-sort-large" type="button" aria-label="Крупные значки">
-                <span class="visually-hidden">Крупные значки</span>
-              </button>
-            </li>
-            <li class="button-sort-item">
-              <button class="button-sort button-sort-list" type="button" aria-label="Список">
-                <span class="visually-hidden">Список</span>
-              </button>
-            </li>
-          </ul>
-
-        </section>
-
         <section class="catalog-hotels" data-test="catalog">
+
+          <h2 class="visually-hidden">Каталог найденных отелей, соответствующих условиям фильтра</h2>
+
+          <div class="sort">
+          <p class="result-filter">Найдено гостиниц:
+            <span class="result-count">38</span>
+          </p>
+
+            <select class="select-control move-to-right" aria-label="Сортировка">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначало популярные</option>
+            </select>
+
+            <ul class="button-sort-list">
+              <li class="button-sort-item">
+                <button class="button-sort button-sort-current button-card" type="button" aria-label="Карточки">
+                  <span class="visually-hidden">Карточки</span>
+                </button>
+              </li>
+              <li class="button-sort-item">
+                <button class="button-sort button-large" type="button" aria-label="Крупные значки">
+                  <span class="visually-hidden">Крупные значки</span>
+                </button>
+              </li>
+              <li class="button-sort-item">
+                <button class="button-sort button-list" type="button" aria-label="Список">
+                  <span class="visually-hidden">Список</span>
+                </button>
+              </li>
+            </ul>
+
+          </div>
+
 
           <ul class="hotel-list">
             <li class="hotel-card">
