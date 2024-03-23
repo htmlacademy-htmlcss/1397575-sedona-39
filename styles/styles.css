@@ -275,11 +275,14 @@ body {
 }
 
 .navigation-link-button {
-  background-color: #756157;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
-  padding: 8px 34px;
+  width: 160px;
+  padding: 8px 5px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #756157;
 }
 
 .navigation-link-button:hover {
@@ -352,9 +355,9 @@ body {
 
 .advantages-item {
   min-height: 385px;
-}
+  }
 
-.advantages-item:nth-child(3n) {
+.advantages-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -363,6 +366,10 @@ body {
   color: #ffffff;
   flex-grow: 1;
   display: flex;
+}
+
+.advantages-item-other:last-child {
+  justify-content: end;
 }
 
 .advantages-item-other h3 {
@@ -485,9 +492,9 @@ body {
 
 .button-search {
   background-color: #756157;
-  padding: 8px 50px;
   min-width: 376px;
   max-width: 600px;
+  padding: 8px 5px;
 }
 
 .button-search:not(:disabled):hover {
@@ -1171,7 +1178,8 @@ body {
   line-height: 20px;
   width: 140px;
   text-align: center;
-  padding: 8px 0;
+  padding: 8px 5px;
+  box-sizing: border-box;
 }
 
 .button-detail {
@@ -1214,7 +1222,8 @@ body {
   text-transform: uppercase;
   margin: 0;
   background-color: #f2f2f2;
-  padding: 9px 22px 8px 23px;
+  padding: 9px 10px 8px;
+  text-align: center;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -1315,6 +1324,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -1380,7 +1393,6 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
-  align-self: center;
 }
 
 .field {
@@ -1443,6 +1455,7 @@ body {
 
 .amount-selection {
   display: flex;
+  align-items: center;
 }
 
 .amount-of-child {
@@ -1606,4 +1619,5 @@ body {
   padding: 18px 0 18px 0;
   margin-top: 25px;
   grid-column: 1 / -1;
+  border-radius: 10px;
 }
