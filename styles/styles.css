@@ -362,9 +362,9 @@ body {
 }
 
 .advantages-item-other {
+  width: 1200px;
   background-color: #82b3d3;
   color: #ffffff;
-  flex-grow: 1;
   display: flex;
 }
 
