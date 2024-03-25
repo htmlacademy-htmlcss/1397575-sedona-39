@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Людмила Семенова](https://up.htmlacademy.ru/htmlcss/39/user/1397575).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751).
+* Сайт: [Мой проект Седона](https://semenova-lv.github.io/1397575-sedona-39/).
 
 ---
 
