@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -31,10 +38,8 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
   object-fit: contain;
 }
-
 
 .page-container {
   min-height: 100%;
@@ -125,6 +130,7 @@ img {
 .page-header {
   display: flex;
   padding: 0 70px;
+  z-index: 1;
 }
 
 .logo {
@@ -146,8 +152,8 @@ img {
 
 .logo img {
   display: block;
-  width: 140px;
-  height: 70px;
+  max-width: 140px;
+  max-height: 70px;
 }
 
 .navigation {
@@ -221,21 +227,28 @@ img {
   width: 20px;
   height: 20px;
   background-color: #000000;
-  mask-position: center;
-  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .navigation-link-search::before {
-  mask-size: 19px 19px;
-  mask-image: url("../image/search-icon.svg");
+  -webkit-mask-size: 19px 19px;
+          mask-size: 19px 19px;
+  -webkit-mask-image: url("../image/search-icon.svg");
+          mask-image: url("../image/search-icon.svg");
 }
 
 .navigation-link-favorites::before {
-  mask-size: 18px 17px;
-  mask-image: url("../image/favorites-icon.svg");
+  -webkit-mask-size: 18px 17px;
+          mask-size: 18px 17px;
+  -webkit-mask-image: url("../image/favorites-icon.svg");
+          mask-image: url("../image/favorites-icon.svg");
 }
 
 .navigation-link-user:hover::before {
@@ -281,7 +294,8 @@ img {
   line-height: 20px;
   text-decoration: none;
   width: 160px;
-  padding: 8px 30px;
+  min-height: 36px;
+  padding: 8px 10px;
   text-align: center;
   box-sizing: border-box;
   background-color: #756157;
@@ -302,6 +316,7 @@ img {
 
 /*Секция приветствие*/
 .hero {
+  position: relative;
   background-color: #808080;
   color: #ffffff;
   background-image: url("../image/background/index-hero.jpg");
@@ -311,10 +326,13 @@ img {
   padding-top: 51px;
   padding-right: 70px;
   padding-left: 70px;
+  padding-bottom: 82px;
   text-align: center;
+  min-height: 352px;
 }
 
 .hero::after {
+  position: absolute;
   content: "";
   display: block;
   width: 1200px;
@@ -323,6 +341,7 @@ img {
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
+  bottom: 0;
   margin-top: 25px;
   margin-left: -70px;
 }
@@ -330,8 +349,8 @@ img {
 .hero img {
   display: block;
   margin: 0 auto;
-  width: 485px;
-  height: 352px;
+  max-width: 485px;
+  max-height: 352px;
 }
 
 /*Преимущества*/
@@ -349,7 +368,6 @@ img {
 }
 
 .advantages-list {
-  background-color: rgba(131, 179, 211, 0.12);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -359,7 +377,8 @@ img {
 
 .advantages-item {
   min-height: 385px;
-  }
+  background-color: rgba(131, 179, 211, 0.12);
+}
 
 .advantages-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.2);
@@ -370,6 +389,7 @@ img {
   background-color: #82b3d3;
   color: #ffffff;
   display: flex;
+  align-items: center;
 }
 
 .advantages-item-other:last-child {
@@ -382,14 +402,14 @@ img {
 
 .advantages-item-other img {
   display: block;
-  width: 800px;
-  height: 385px;
+  max-width: 800px;
+  max-height: 385px;
 }
 
 .advantages-description {
-  width: 400px;
+  max-width: 400px;
   box-sizing: border-box;
-  padding: 102px 85px;
+  padding: 102px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -449,7 +469,6 @@ img {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -466,7 +485,6 @@ img {
   margin: 0;
 }
 
-
 .services-item::before {
   content: "";
   display: block;
@@ -474,6 +492,7 @@ img {
   background-position: center;
   height: 76px;
   width: 75px;
+  margin: 0 auto;
   margin-bottom: 28px;
 }
 
@@ -505,7 +524,8 @@ img {
 
 .button-search {
   background-color: #756157;
-  max-width: 376px;
+  max-width: 592px;
+  min-height: 52px;
   padding: 8px 50px;
 }
 
@@ -527,6 +547,8 @@ img {
 }
 
 .newsletter-form {
+  max-width: 684px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -540,9 +562,19 @@ img {
   color: #000000;
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
-  width: 452px;
   min-height: 52px;
   padding: 14px 20px;
+  flex-grow: 1;
+}
+
+.newsletter input::-webkit-input-placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.newsletter input::-moz-placeholder {
+  color: #000000;
+  opacity: 0.6;
 }
 
 .newsletter input::placeholder {
@@ -593,8 +625,6 @@ img {
   align-items: start;
 }
 
-
-
 /*Социальные сети*/
 .social {
   padding: 5px 0;
@@ -621,21 +651,27 @@ img {
   height: 17px;
   width: 24px;
   background-color: #83b3d3;
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 
 .social-link-vk::before {
-  mask-image: url("../image/social/vk.svg");
+  -webkit-mask-image: url("../image/social/vk.svg");
+          mask-image: url("../image/social/vk.svg");
 }
 
 .social-link-tg::before {
-  mask-image: url("../image/social/telegram.svg");
+  -webkit-mask-image: url("../image/social/telegram.svg");
+          mask-image: url("../image/social/telegram.svg");
 }
 
 .social-link-ytb::before {
-  mask-image: url("../image/social/youtube.svg");
+  -webkit-mask-image: url("../image/social/youtube.svg");
+          mask-image: url("../image/social/youtube.svg");
 }
 
 .social-link:hover::before {
@@ -658,6 +694,8 @@ img {
 .contact-tel a {
   text-decoration: none;
   color: #000000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   display: block;
@@ -771,6 +809,7 @@ img {
 }
 
 .catalog-filter {
+  min-height: 160px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px 70px;
@@ -781,6 +820,13 @@ img {
   padding: 0;
   margin: 0;
   min-width: 150px;
+  max-width: 180px;
+}
+
+.catalog-filter-cost {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .move-to-right {
@@ -799,10 +845,9 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 160px;
 }
 
-.catalog-filter-list:not(:last-of-type) {
+.catalog-filter-list:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -825,12 +870,13 @@ img {
   opacity: 0.3;
 }
 
-.control-input[type="checkbox"]:focus + .control-mark {
-  outline: auto;
+.control:has(.control-input:disabled) {
+  cursor: default;
+  opacity: 0.3;
 }
 
-.control-input:disabled ~ span{
-  opacity: 0.3;
+.control-input[type="checkbox"]:focus + .control-mark {
+  outline: auto;
 }
 
 .control-mark {
@@ -866,10 +912,11 @@ img {
   background-color: #3f5e72;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.range:not(:last-of-type) {
+.range:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -903,12 +950,15 @@ img {
   box-sizing: border-box;
   border: none;
   background-color: #f2f2f2;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
 }
 
 .input-price::-webkit-outer-spin-button,
 .input-price::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -992,6 +1042,7 @@ img {
   line-height: 20px;
   padding: 8px 30px;
   width: 191px;
+  min-height: 36px;
 }
 
 .button-reset {
@@ -1031,6 +1082,7 @@ img {
   flex-wrap: wrap;
   gap: 10px 70px;
   align-items: center;
+  min-height: 49px;
 }
 
 .result-filter {
@@ -1055,21 +1107,22 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-right: 36px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #ffffff;
   background-image: url("../image/arrow-select-icon.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
 
-.select-control:hover {
+.select-control:not(:disabled):hover {
   border-color: #68a2ca;
 }
 
 .select-control:disabled {
-  border-color: rgba(0, 0, 0, 0.3);
-  color: rgba(0, 0, 0, 0.3);
   cursor: default;
+  opacity: 0.3;
 }
 
 .button-sort-list {
@@ -1160,9 +1213,9 @@ img {
 
 .hotel-card img {
   display: block;
-  margin: 0;
-  width: 300px;
-  height: 212px;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 212px;
 }
 
 .hotel-card-link {
@@ -1205,6 +1258,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   width: 140px;
+  min-height: 36px;
   text-align: center;
   padding: 8px 5px;
   box-sizing: border-box;
@@ -1308,6 +1362,7 @@ img {
 .pagination .button {
   display: block;
   min-width: 60px;
+  min-height: 60px;
   text-align: center;
   padding: 12px 18px;
   box-sizing: border-box;
@@ -1412,7 +1467,9 @@ img {
 .search-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 23px;
+  -webkit-column-gap: 23px;
+     -moz-column-gap: 23px;
+          column-gap: 23px;
   row-gap: 23px;
 }
 
@@ -1445,6 +1502,14 @@ img {
   opacity: 0.3;
 }
 
+.field::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .field::placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -1468,7 +1533,7 @@ img {
 .field-date {
   width: 100%;
   line-height: 24px;
-  padding: 12px 38px 12px 20px;
+  padding: 12px 64px 12px 20px;
   border-radius: 4px;
   background-image: url("../image/modal/calendar-icon.svg");
   background-repeat: no-repeat;
@@ -1495,11 +1560,21 @@ img {
   justify-self: end;
 }
 
+.amount-selection .form-label {
+  width: 91px;
+}
+
 .form-label-tooltip {
   display: flex;
-  gap: 10px;
+  gap: 11px;
   justify-content: end;
   align-items: center;
+}
+
+.form-label-tooltip .form-label {
+  display: flex;
+  justify-content: end;
+  text-align: end;
 }
 
 .tooltip {
@@ -1538,7 +1613,8 @@ img {
   border-radius: 10px;
   margin-top: 16px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   box-sizing: border-box;
 }
 
@@ -1575,12 +1651,15 @@ img {
   padding: 12px 5px;
   box-sizing: border-box;
   border-radius: 0;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
 }
 
 .field-number::-webkit-outer-spin-button,
 .field-number::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
