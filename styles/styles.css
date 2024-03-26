@@ -85,10 +85,6 @@ img {
   text-transform: uppercase;
 }
 
-.break-row {
-  display: block;
-}
-
 .button {
   display: inline-block;
   font-family: inherit;
@@ -415,8 +411,13 @@ img {
   justify-content: center;
 }
 
+.advantages-description .tittle {
+  max-width: 175px;
+  text-align: center;
+}
+
 .tittle-underline {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -1137,26 +1138,21 @@ img {
 }
 
 .button-sort {
+  display: block;
   background-color: #ffffff;
   min-width: 48px;
   min-height: 48px;
   border: 2px solid #e5e5e5;
+  box-sizing: border-box;
   border-radius: 4px;
-  cursor: pointer;
-  padding: 0;
 }
 
-.button-sort:not(:disabled):hover {
+.button-sort:hover {
   border-color: #000000;
 }
 
-.button-sort:not(:disabled):active {
+.button-sort:active {
   border-color: #000000;
-}
-
-.button-sort:disabled {
-  opacity: 0.3;
-  cursor: default;
 }
 
 .button-sort-current {
@@ -1406,6 +1402,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
 .modal-container-close {
